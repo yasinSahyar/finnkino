@@ -9,7 +9,7 @@ function fetchData(selectedTheater, selectedDate) {
         .then(response => response.text())
         .then(str => new DOMParser().parseFromString(str, "text/xml"))
         .then(data => {
-            movieList.innerHTML = ""; // Clear existing movie list
+            movieList.innerHTML = ""; 
 
             const elokuvat = data.querySelectorAll('Show');
             for (let i = 0; i < elokuvat.length; i++) {
@@ -18,8 +18,8 @@ function fetchData(selectedTheater, selectedDate) {
                 let genres = show.getElementsByTagName('Genres')[0].innerHTML;
                 let eventSmallImagePortrait = show.getElementsByTagName('EventSmallImagePortrait')[0].innerHTML;
                 let dtLocalRelease = show.getElementsByTagName('dtLocalRelease')[0].innerHTML;
-                let director = ""; // You need to extract director information from the XML
-                let actors = "";   // You need to extract actor information from the XML
+                let director = ""; 
+                let actors = "";   
                 let duration = show.getElementsByTagName('LengthInMinutes')[0].innerHTML;
 
                 let elokuvaContainer = document.createElement('div');
@@ -58,7 +58,7 @@ function formatDate(dateString) {
 theaterSelect.addEventListener("change", updateMovies);
 timeSelect.addEventListener("change", updateMovies);
 
-// Fetch data for the initial date range on page load
+
 const startDate = new Date('2023-11-26');
 const endDate = new Date('2023-12-26');
 let currentDate = startDate;
@@ -72,5 +72,5 @@ while (currentDate <= endDate) {
     currentDate.setDate(currentDate.getDate() + 1);
 }
 
-// Fetch data for the initial date on page load
+
 updateMovies();
