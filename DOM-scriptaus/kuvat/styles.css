@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+  }
+  .laatikko{
+    width: 100%;
+    min-height:100vh;
+    background: linear-gradient(#ddd6f3, #faaca8);
+    padding: 70px;
+  }
+  .todo-lista{
+    width: 100%;
+    max-width: 540px;
+    background: rgba(245, 245, 245, 0.852);
+    margin: 100px auto 10px;
+    padding: 40px 30px 50px;
+  }
+  .todo-lista h1{
+    color: #d2c8f3;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 30px;
+  
+  }
+  .haku{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #ddd6f3, #faaca8);
+    padding-left: 20px;
+    margin-bottom: 20px;
+    border-radius: 0px 30px 30px 0px;
+  }
+  input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+  }
+  .nappi{
+    border: none;
+    outline: none;
+    padding: 20px 50px;
+    color: whitesmoke;
+    background: #faaca8;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 30px;
+  }
+  .nappi:hover {
+    background-color: #ddd6f36e;
+  }
+  ul li{
+    cursor: pointer;
+    position: relative;
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+  }
+  ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(kuvat/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 7px;
+    left: 5px;
+  }
+  ul li.checked{
+    color: gray;
+    text-decoration: line-through;
+  }
+  ul li.checked::before{
+    background-image: url(kuvat/checked.png);
+  }
+  ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    color: gray;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+  ul li span:hover{
+    background: lightgray;
+    
+  }

@@ -1,0 +1,73 @@
+body {
+    background-color: rgb(248, 196, 246);
+  }
+  
+  header {
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    background-color: #000000;
+  }
+  
+  h4 {
+    display: block;
+    color: rgb(248, 196, 246);
+    float: left;
+    text-align: center;
+    padding: 8px 12px;
+    margin: 0;
+    margin-bottom: auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+  }
+    
+  li {
+    float: left;
+    display: inline-block;
+    margin-right: 15px;
+  }
+    
+  li a {
+    display: inline-block;
+    color: rgb(248, 196, 246);
+    text-align: center;
+    padding: 8px 12px;
+    text-decoration: none;
+  }
+  
+  #laatikko {
+    margin: 20px;
+  }
+  
+  .elokuva-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .elokuva-container img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .elokuva-tiedot {
+    flex: 1;
+  }
+  
+  .elokuva-tiedot h1 {
+    font-size: 24px;
+    margin: 5px 0;
+  }
+  
+  .elokuva-tiedot h2 {
+    font-size: 18px;
+    margin: 5px 0;
+  }

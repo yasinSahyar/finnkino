@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Your head content here -->
+</head>
+<body>
+    <section>
+        <select id="theater-select" onchange="updateMovies(this.value)">
+            <!-- Theater options here -->
+            <option>Valitse teatteri</option>
+            <option value="1012">Espoo</option>
+            <option value="1039">Espoo: OMENA</option>
+            <option value="1038">Espoo: SELLO</option>
+            <option value="1002">Helsinki</option>
+            <option value="1045">Helsinki: ITIS</option>
+            <option value="1031">Helsinki: KINOPALATSI</option>
+            <option value="1032">Helsinki: MAXIM</option>
+        </select>
+    </section>
+
+    <section>
+        <select id="time-select" onchange="updateMovies(theaterSelect.value, this.value)">
+            <option>Valitse aika</option>
+            <!-- Time options here -->
+            <option>Valitse aika</option>
+            <option value="2023-11-30">2023-11-30</option>
+            <option value="2023-11-29">2023-11-29</option>
+            <option value="2023-11-28">2023-11-28</option>
+            <option value="2023-11-27">2023-11-27</option>
+            <option value="2023-11-26">2023-11-26</option>
+        </select>
+    </section>
+
+    <section>
+        <input type="text" id="search-input" placeholder="Etsi elokuvia">
+    </section>
+
+    <div id="laatikko"></div>
+    <script src="script.js"></script>
+</body>
+</html>
